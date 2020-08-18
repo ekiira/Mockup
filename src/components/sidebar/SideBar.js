@@ -1,76 +1,65 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Nav } from 'react-bootstrap';
-import Logo from '../../assets/icons/logo.png'
+import Logo from '../../assets/icons/logo.svg'
 import Active from '../../assets/icons/active.png'
 import Users from '../../assets/icons/users.png'
 import LastIcon from '../../assets/icons/last.png'
+import ArrowRight from '../../assets/icons/chevron-right.svg'
+
+import './SideBar.css';
 
 
-import './SideBar.css'
 const SideBar = () => {
-
+  const visi = useSelector(state => state.navVisibility.navVisible)
   return (
-      <Nav defaultActiveKey="/home" className="flex-column sidebar">
-  <Nav.Link href="/home">
+    <div className={visi ? 'sidebar-visi' : 'sidebar-nonvisi'} id='sidebar'>
+      <div className='d-flex justify-content-center align-items-center'>
+       <div>
+        <div>
+          <Nav defaultActiveKey="/home" className="flex-column navbar py-1 w-100">
+            <Nav.Link href="/home" className='logo-wrapper py-4'>
+              <img src={Logo} className='img-fluid' alt='logo' />
+            </Nav.Link>
+            <div className='logo-wrapper pt-4  pb-5 text-center'>
+              <Nav.Link eventKey="link-1" className='py-3'>
+                <img src={Active} className='img-fluid' alt='active-icon' />
+              </Nav.Link>
+              <Nav.Link eventKey="link-2" className='pb-3'>
+                <img src={Users} className='img-fluid' alt='users-icon' />
+              </Nav.Link>
+              <Nav.Link eventKey="link-3" className='pb-3'>
+                <img src={LastIcon} className='img-fluid' alt='last-icon' />
+              </Nav.Link>
+            </div>
+   
+            <div className='logo-wrapper pt-4  pb-5 mx-5 text-center'>
+              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
+                PN
+              </Nav.Link>
+              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
+                JI
+              </Nav.Link>
+              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
+                LG
+              </Nav.Link>
+              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
+                AW
+              </Nav.Link>
+              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
+                AW
+              </Nav.Link>
+            </div>
+          </Nav>
+          <p>
+          <img src={ArrowRight} alt='arrow-right' className='img-fluid'/>
+        </p>
+        </div>
+      </div>
 
-<img src={Logo} className='img-fluid' alt='logo' />
-
-  </Nav.Link>
-  <Nav.Link eventKey="link-1">
-<img src={Active} className='img-fluid' alt='active-icon' />
-    
-    </Nav.Link>
-  <Nav.Link eventKey="link-2">
-
-<img src={Users} className='img-fluid' alt='users-icon' />
-
-  </Nav.Link>
-  <Nav.Link eventKey="disabled">
-<img src={LastIcon} className='img-fluid' alt='last-icon' />
-    
-  </Nav.Link>
-</Nav>
- 
+    </div>
+  </div>
   )
 }
 
 export default SideBar;
-{/* 
-<div className="side d-flex justify-content-center align-items-center">
-    <div>
-      <div>
-        <nav class="flex-column navbar" id="idea">  
-          <ul class="navbar-nav">
-            <li>
-              <a class="nav-link py-3" href="#home"> <img src="./assets/icons/home-icon.svg" alt="home-icon" class="mr-3" /> Home</a>
-            </li>  
-            <li>
-              <a class="nav-link py-3" href="#about"> <img src="./assets/icons/about-icon.svg" alt="about-icon" class="mr-3"/> About</a>
-            </li>
-            <li> */}
-              {/* <a class="nav-link py-3" href="#services"> <img src="./assets/icons/services-icon.svg" alt="service-icon" class="mr-3"/> Services</a>
-            </li>
-            <li>
-              <a class="nav-link py-3" href="#portfolio"> <img src="./assets/icons/portfolio-icon.svg" alt="portfolio-icon" class="mr-3"/> Portfolio</a>
-            </li>
-            <li>
-              <a class="nav-link py-3" href="#testimonials"> <img src="./assets/icons/testimonial-icon.svg" alt="tstimonials-icon" class="mr-3"/> Testimonials</a>
-            </li>
-            <li>
-              <a class="nav-link py-3" href="#contact"> <img src="./assets/icons/contact-icon.svg" alt="contact-icon" class="mr-3"/> Contact</a>
-            </li>
-        </ul>   
-          <!-- <a class="nav-link py-3 active" href="#home"> <img src="./assets/icons/home-icon.svg" alt="home-icon" class="mr-3" /> Home</a>
-          <a class="nav-link py-3" href="#about"> <img src="./assets/icons/about-icon.svg" alt="about-icon" class="mr-3"/> About</a>
-          <a class="nav-link py-3" href="#services"> <img src="./assets/icons/services-icon.svg" alt="service-icon" class="mr-3"/> Services</a>
-          <a class="nav-link py-3" href="#portfolio"> <img src="./assets/icons/portfolio-icon.svg" alt="portfolio-icon" class="mr-3"/> Portfolio</a>
-          <a class="nav-link py-3" href="#testimonials"> <img src="./assets/icons/testimonial-icon.svg" alt="tstimonials-icon" class="mr-3"/> Testimonials</a>
-          <a class="nav-link py-3" href="#contact"> <img src="./assets/icons/contact-icon.svg" alt="contact-icon" class="mr-3"/> Contact</a> -->
-        </nav>
-      </div>
-    </div>
-  
-  </div>
-  <p class="pt-5 d-flex justify-content-center align-items-end foot">&copy; 2020 John Doe</p>
-
-</section> */}

@@ -1,0 +1,20 @@
+import { SET_VISIBILITY } from '../actions'
+
+const initialState = {
+ navVisible : false
+};
+
+const navVisibilityReducer= (state = initialState, action) => {
+  switch (action.type) {
+    case SET_VISIBILITY:
+      return {
+        ...state,
+        navVisible: !state.navVisible
+      };
+      default:
+        return state;
+  }
+
+}
+
+export default navVisibilityReducer;

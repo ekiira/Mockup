@@ -1,0 +1,26 @@
+.navb {
+  margin-left: 100px;
+}
+
+.search-text {
+  border:none;
+  background:transparent ;
+}
+
+.search-text:focus {
+  box-shadow: none;
+}
+
+.form {
+  border-left: 1px solid black;
+}
+
+@media (max-width: 991px) {
+  #navb-visi {
+    margin-left: 100px;
+  }
+
+  #navb-nonvisi {
+    margin-left: initial;
+  }
+}
