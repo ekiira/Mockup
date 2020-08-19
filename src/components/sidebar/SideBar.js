@@ -2,10 +2,17 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Nav } from 'react-bootstrap';
 import Logo from '../../assets/icons/logo.svg'
-import Active from '../../assets/icons/active.png'
-import Users from '../../assets/icons/users.png'
-import LastIcon from '../../assets/icons/last.png'
-import ArrowRight from '../../assets/icons/chevron-right.svg'
+import Active from '../../assets/icons/active.svg'
+import Users from '../../assets/icons/users.svg'
+import LastIcon from '../../assets/icons/last.svg'
+import ArrowRight from '../../assets/icons/chevron.svg'
+
+import Pw from '../../assets/icons/PN.svg'
+import Ji from '../../assets/icons/JI.svg'
+import Lg from '../../assets/icons/LG.svg'
+import Aw from '../../assets/icons/AW.svg'
+import Aw2 from '../../assets/icons/AW@.svg'
+
 
 import './SideBar.css';
 
@@ -14,46 +21,53 @@ const SideBar = () => {
   const visi = useSelector(state => state.navVisibility.navVisible)
   return (
     <div className={visi ? 'sidebar-visi' : 'sidebar-nonvisi'} id='sidebar'>
-      <div className='d-flex justify-content-center align-items-center'>
+      <div className='d-flex justify-content-center align-items-center mm'>
        <div>
         <div>
-          <Nav defaultActiveKey="/home" className="flex-column navbar py-1 w-100">
+          <Nav defaultActiveKey="/home" className="flex-column navbar py-1 w-100 h-100">
             <Nav.Link href="/home" className='logo-wrapper py-4'>
-              <img src={Logo} className='img-fluid' alt='logo' />
+              <img src={Logo} className='' alt='logo' />
             </Nav.Link>
-            <div className='logo-wrapper pt-4  pb-5 text-center'>
+            <hr/>
+
+            <div className='logo-wrapper text-center'>
               <Nav.Link eventKey="link-1" className='py-3'>
-                <img src={Active} className='img-fluid' alt='active-icon' />
+                <img src={Active} className='' alt='active-icon' />
               </Nav.Link>
               <Nav.Link eventKey="link-2" className='pb-3'>
-                <img src={Users} className='img-fluid' alt='users-icon' />
+                <img src={Users} className='' alt='users-icon' />
               </Nav.Link>
               <Nav.Link eventKey="link-3" className='pb-3'>
-                <img src={LastIcon} className='img-fluid' alt='last-icon' />
+                <img src={LastIcon} className='' alt='last-icon' />
               </Nav.Link>
             </div>
-   
-            <div className='logo-wrapper pt-4  pb-5 mx-5 text-center'>
-              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
-                PN
+
+            <hr/>
+            <div className='logo-wrapper text-center'>
+              <Nav.Link href="/home" className='py-2'>
+                <img src={Aw} className='w-100' alt='logo' />
               </Nav.Link>
-              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
-                JI
+              <Nav.Link href="/home" className='py-2'>
+                <img src={Ji} className='w-100' alt='logo' />
               </Nav.Link>
-              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
-                LG
+              <Nav.Link href="/home" className='py-2'>
+                <img src={Lg} className='w-100' alt='logo' />
               </Nav.Link>
-              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
-                AW
+              <Nav.Link href="/home" className='py-2'>
+                <img src={Aw} className='w-100' alt='logo' />
               </Nav.Link>
-              <Nav.Link eventKey="link-3" className='py-2 px-2 mb-4 nav-circles'>
-                AW
+              <Nav.Link href="/home" className='py-2'>
+                <img src={Aw2} className='w-100' alt='logo' />
               </Nav.Link>
             </div>
+          <hr/>
+           
           </Nav>
-          <p>
+
+          <Nav.Link href="/home" className='py-2 bottom'>
           <img src={ArrowRight} alt='arrow-right' className='img-fluid'/>
-        </p>
+
+              </Nav.Link>
         </div>
       </div>
 

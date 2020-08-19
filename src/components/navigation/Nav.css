@@ -1,0 +1,10 @@
+.nav-two-wrapper {
+  margin-left: 100px;
+
+}
+
+#nav-two-date {
+  color: red;
+  /* color: linear-gradient(0deg, #4DBD98, #4DBD98),  */
+  /* linear-gradient(0deg, #4DBD98, #4DBD98), linear-gradient(0deg, #4DBD98, #4DBD98), #4DBD98 !important; */
+}

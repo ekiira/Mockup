@@ -30,11 +30,11 @@ const TopNav = () => {
 
   return (
      <header>
-     <Navbar expand="lg" className='navb py-4' id={visible ? 'navb-visi' : 'navb-nonvisi'}>
+     <Navbar expand="lg" className='navb' id={visible ? 'navb-visi' : 'navb-nonvisi'}>
      <Nav.Link className='mr-3 d-flex align-items-center' onClick={handleSideBar}>
      <img src={Menu} alt='menu-icon' className=''/>
      </Nav.Link>
-     <Navbar.Brand href="#home" className='mr-4'>
+     <Navbar.Brand href="#home" className='mr-5 fcmb'>
        <img
          alt=""
          src={Logo}
@@ -42,7 +42,7 @@ const TopNav = () => {
          height="30"
          className="d-inline-block align-top mr-3"
        />
-       FCMB: Mobile Banking ...
+       <span className=''>FCMB: Mobile Banking ...</span>
      </Navbar.Brand>
      
      <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -79,21 +79,21 @@ const TopNav = () => {
      </Nav.Link>
      
      <Dropdown as={ButtonGroup}>
-     <Button variant="none">
+     <Button variant="none" className='text-left'>
      <p className='mb-0'> Mark Dawn</p>
-     <a href="mailto:Markdawn@natterbase">
+     <a href="mailto:Markdawn@natterbase" className='t-nav-mail'>
      Markdawn@natterbase
      </a>
      </Button>
      
-     <Dropdown.Toggle split variant="none" id="dropdown-split-basic" />
+     <Dropdown.Toggle split variant="none" id="dropdown-split-basic" className='d-menu'/>
      
      
      
-     <Dropdown.Menu>
-     <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-     <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-     <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+     <Dropdown.Menu >
+     <Dropdown.Item href="#/action-1">Mark Dawn</Dropdown.Item>
+     <Dropdown.Item href="#/action-2">Mark Dawn</Dropdown.Item>
+     <Dropdown.Item href="#/action-3">Mark Dawn</Dropdown.Item>
      </Dropdown.Menu>
      </Dropdown>
      <Form inline className='d-block d-lg-none'>

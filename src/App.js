@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import TopNav from './components/top-navigation/TopNav';
+import Nav from './components/navigation/Nav';
+
 
 
 // REDUX CONFIGURATION
@@ -38,6 +40,7 @@ const App = () => {
     <div className="App">
     <TopNav />
     <SideBar />
+    <Nav />
   </div>
     </PersistGate>
     </Provider>
