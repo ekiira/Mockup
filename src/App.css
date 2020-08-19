@@ -1,0 +1,10 @@
+.mer {
+  padding-left: 100px;
+}
+
+@media (max-width: 991px) {
+  .mer {
+    padding-left: initial;
+  }
+  
+}

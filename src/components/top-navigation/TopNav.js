@@ -79,7 +79,7 @@ const TopNav = () => {
      </Nav.Link>
      
      <Dropdown as={ButtonGroup}>
-     <Button variant="none" className='text-left'>
+     <Button variant="none" className='text-left d-menu'>
      <p className='mb-0'> Mark Dawn</p>
      <a href="mailto:Markdawn@natterbase" className='t-nav-mail'>
      Markdawn@natterbase

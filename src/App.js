@@ -3,7 +3,9 @@ import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import TopNav from './components/top-navigation/TopNav';
 import Nav from './components/navigation/Nav';
-
+import Modules from './components/modules/Modules';
+import TestCases from './components/test-cases/TestCases';
+import QuickOverview from './components/quickOverview/QuickOverview';
 
 
 // REDUX CONFIGURATION
@@ -20,7 +22,7 @@ import rootReducer from './reducers/rootReducer';
 const persistConfig = {
   key: 'root',
   storage,
-  // blacklist: ['navVisibility']
+  whitelist: ['modules', 'testCases']
 };
 
 // Pass the root reducer and persist config into the persist reducer
@@ -41,6 +43,22 @@ const App = () => {
     <TopNav />
     <SideBar />
     <Nav />
+    <div className='container mer py-5 pr-0'>
+      <div className='row'> 
+        <div className='col-12 col-lg-3 pr-0'>
+    <Modules />
+
+        </div>
+        <div className='col-12 col-lg-5 pr-0'>
+        <TestCases />
+    
+            </div>
+            <div className='col-12 col-lg-4 pr-0'>
+           <QuickOverview/>
+        
+                </div>
+      </div>
+    </div>
   </div>
     </PersistGate>
     </Provider>
