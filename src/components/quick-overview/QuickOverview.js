@@ -11,7 +11,7 @@ const QuickOverview = () => {
   <Card className='quick-overview-wrapper'>
       <div className='container pt-4 pb-5'>
         <div className='row py-2'>
-          <div className='col-12 col-lg-6'>
+          <div className='col-6'>
             <Card className='px-4 py-4 lil-card' id='orange'>
               <div className='d-flex justify-content-between'>
                 <p className='mb-0'>
@@ -24,7 +24,7 @@ const QuickOverview = () => {
               </div>
             </Card>
           </div>
-          <div className='col-12 col-lg-6'>
+          <div className='col-6'>
             <Card className='px-4 py-4 lil-card' id='grey'>
               <div className='d-flex justify-content-between'>
                 <img src={doc}  alt='icon'/>
@@ -38,7 +38,7 @@ const QuickOverview = () => {
         </div>
       
         <div className='row py-2'>
-          <div className='col-12 col-lg-6'>
+          <div className='col-6'>
             <Card className='px-4 py-4 lil-card' id='blue'>
               <div className='d-flex justify-content-between'>
                 <img src={doc} alt='icon'/>
@@ -50,7 +50,7 @@ const QuickOverview = () => {
               </div>
             </Card>
           </div>
-          <div className='col-12 col-lg-6'>
+          <div className='col-6'>
             <Card className='px-4 py-4 lil-card' id='pink'>
               <div className='d-flex justify-content-between'>
                 <img src={doc}  alt='icon'/>
@@ -64,7 +64,7 @@ const QuickOverview = () => {
         </div>
       
         <div className='row py-2'>
-          <div className='col-12 col-lg-6'>
+          <div className='col-6'>
             <Card className='px-4 py-4 lil-card' id='green'>
               <div className='d-flex justify-content-between'>
                 <img src={doc} alt='icon'/>
@@ -75,7 +75,7 @@ const QuickOverview = () => {
               </div>
             </Card>
           </div>
-          <div className='col-12 col-lg-6'>
+          <div className='col-6'>
             <Card className='px-4 py-4 lil-card' id='purple'>
               <div className='d-flex justify-content-between'>
                 <img src={doc}  alt='icon'/>
