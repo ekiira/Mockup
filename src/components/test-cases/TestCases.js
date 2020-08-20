@@ -42,50 +42,50 @@ const TestCases = ( ) => {
   }, [])
 
   return (
-<div className='h-100'>
-<h4> Added Test Case</h4>
-<Card className='test-cases-wrapper'>
-<ul className='list-group list-group-flush'>
-  {cases.map(({text}, i) => (
-    <li className='list-group-item' key={i} >
-      <div className='row py-2' >
-        <div className='col-8'>
-          {text}
-        </div>
+  <div className='h-100'>
+  <h4> Added Test Case</h4>
+  <Card className='test-cases-wrapper'>
+  <ul className='list-group list-group-flush mt-4 mb-5 '>
+    {cases.map(({text}, i) => (
+      <li className='list-group-item' key={i} >
+        <div className='row py-2' >
+          <div className='col-8'>
+            {text}
+          </div>
 
-        <div className='col-4 text-center'>
-          <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              {mark}
-            </Dropdown.Toggle>
-            <Dropdown.Menu className='px-2 db-menu'>
-              <DropDown/>
-            </Dropdown.Menu>
-          </Dropdown>
+          <div className='col-4 text-center'>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                {mark}
+              </Dropdown.Toggle>
+              <Dropdown.Menu className='px-2 db-menu'>
+                <DropDown/>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
         </div>
-      </div>
-    </li>
-  ))}
-</ul>
+      </li>
+    ))}
+  </ul>
 
-<div className='row py-3'>
+  <div className='row py-3'>
     <div className='col-6'>
     <div className='text-center'>
-    <Button variant="none" className='text-center'>New Test Case</Button>
+    <Button variant="none" className='text-center new-test-btn'>New Test Case</Button>
     
     </div>
     </div>
     <div className='col-6'>
-    <div className='text-center'>
-    <Button variant="none"  className='text-center'>Test</Button>
-    
-    </div>
-    </div>
-</div>
-</Card>
+    <div className='text-center '>
+    <Button variant="none"  className='text-center test-btn'>Test</Button>
 
-</div>
-      )
+    </div>
+    </div>
+  </div>
+  </Card>
+
+  </div>
+  )
 }
 
 export default TestCases;
