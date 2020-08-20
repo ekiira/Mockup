@@ -13,7 +13,8 @@ import DropDown from './Dropdown';
 
 const TestCases = ( ) => {
   const dispatch = useDispatch()
-  const cases = useSelector(state => state.testCases.testCases)
+  const cases = useSelector(state => state.testCases.testCases);
+  const mark = useSelector(state => state.testmark.testmark)
 
   const testCases = [
     { text: 'Make the background image blur' },
@@ -36,6 +37,7 @@ const TestCases = ( ) => {
 
   return (
     <Card className='test-cases-wrapper'>
+      <h4 className='font-weight-bold'> Added Test case </h4>
       <ul className='list-group list-group-flush'>
         {cases.map(({text}, i) => (
           <li className='list-group-item' key={i} >
@@ -47,7 +49,7 @@ const TestCases = ( ) => {
               <div className='col-4 text-center'>
                 <Dropdown>
                   <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Pass
+                    {mark}
                   </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <DropDown/>

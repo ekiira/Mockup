@@ -1,3 +1,10 @@
+.App {
+  color: #03293D;
+  background: #2D2D2D;
+opacity: 0.04;
+font-family: 'Nunito Sans', sans-serif;
+}
+
 .mer {
   padding-left: 100px;
 }

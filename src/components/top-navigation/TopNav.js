@@ -8,8 +8,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { visibility } from '../../actions'
 
 // Import icons/images
-import Logo from '../../assets/icons/fcmb.png'
-import Search from '../../assets/icons/search.png'
+import Logo from '../../assets/icons/brandlogo.svg'
+import Search from '../../assets/icons//search.svg'
 import Notification from '../../assets/icons/bell.svg'
 import Owner from '../../assets/icons/owner.svg'
 import Rank from '../../assets/icons/rank.svg'
@@ -38,11 +38,9 @@ const TopNav = () => {
        <img
          alt=""
          src={Logo}
-         width="30"
-         height="30"
+       
          className="d-inline-block align-top mr-3"
        />
-       <span className=''>FCMB: Mobile Banking ...</span>
      </Navbar.Brand>
      
      <Navbar.Toggle aria-controls="basic-navbar-nav" />

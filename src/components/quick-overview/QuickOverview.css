@@ -1,0 +1,49 @@
+.lil-card {
+box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15);
+border-radius: 5px;
+color: #ffffff;
+}
+
+#orange {
+  background: #F15832;
+
+}
+
+#grey {
+  background: rgba(3, 41, 61, 0.8);
+}
+
+#blue {
+  background: #296799;
+}
+
+#pink {
+  background: #F8426E;
+}
+
+#green {
+  background: #4DBD98;
+}
+
+#purple {
+  background: #3D43A2;
+}
+
+.quick-overview-wrapper {
+  /* height: 500px; */
+}
+
+.q-overview-text {
+font-weight: bold;
+font-size: 14px;
+line-height: 19px;
+color: #FFFFFF;
+
+}
+
+.q-overview-num {
+  font-style: normal;
+font-weight: 800;
+font-size: 24px;
+line-height: 150%;
+}

@@ -1,38 +1,25 @@
-import React from 'react';
-// React bootstrap
-import { Navbar, Nav }  from 'react-bootstrap';
+import React from 'react'
+import { Tab } from 'semantic-ui-react';
 
-import './Nav.css';
+import 'semantic-ui-css/semantic.min.css'
 
-import calender from '../../assets/icons/calendar.svg'
+const panes = [
+  {
+    menuItem: 'Tab 1',
+    render: () => <Tab.Pane attached={false}>Tab 1 Content</Tab.Pane>,
+  },
+  {
+    menuItem: 'Tab 2',
+    render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>,
+  },
+  {
+    menuItem: 'Tab 3',
+    render: () => <Tab.Pane attached={false}>Tab 3 Content</Tab.Pane>,
+  },
+]
 
-const Navigation = () => {
-
-return (
- <header  className='nav-two-wrapper'>
- 
-    <div className='container'>
-    <Navbar bg="light" expand="lg">
-  <Nav.Link href="#home">Overview</Nav.Link>
-  <Nav.Link href="#home">Teams</Nav.Link>
-  <Nav.Link href="#home">Test</Nav.Link>
-  <Nav.Link href="#home">Files</Nav.Link>
-  <Nav.Link href="#home">Progress</Nav.Link>
-
-    <Nav className="ml-auto " id='nav-two-date'>
-      <Nav.Link href="#home" className=''>
-     <img src={calender} alt='notification-icon' className='mr-3'/>
-        
-     Project Deadline:
-      
-      </Nav.Link>
-      <Nav.Link href="#link"> 10-june-2020  </Nav.Link>
-    </Nav>
-    
-</Navbar>
-  </div>
- </header>
+const TabExampleSecondaryPointing = () => (
+  <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
 )
-}
 
-export default Navigation;
+export default TabExampleSecondaryPointing

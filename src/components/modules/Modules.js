@@ -6,6 +6,7 @@ import { modules } from '../../actions'
 import { Card } from 'react-bootstrap'
 
 import clock from '../../assets/icons/clock.svg'
+import devs from '../../assets/icons/devs.svg'
 
 import './Modules.css'
 
@@ -75,27 +76,31 @@ useEffect(() => {
 
   return (
     <div className='modules-wrapper w-100'>
+      <h4> Modules </h4>
         <ul className='pl-0'>
 {meee.map(({title, subTitle, dueDate, images}, i) => (
   <li key={i}>
-  <Card className='w-100 mb-3'>
+  <Card className='w-100 mb-3 modules-card'>
   <Card.Body>
     <div className='d-flex justify-content-between'>
       <div>
-        <Card.Text className='mb-0'>{title}</Card.Text>
-        <Card.Text>{subTitle}</Card.Text>
+        <Card.Text className='mb-0 modules-card-text'>{title}</Card.Text>
+        <Card.Text className='modules-card-text'>{subTitle}</Card.Text>
       </div>
       <Card.Text>...</Card.Text>
     </div>
 
-    <div className='d-flex justfy-content-between'>
+    <div className='d-flex justify-content-between'>
       <div>
-        <Card.Text>
+        <Card.Text className='modules-card-due'>
           <img src={clock} alt='clock' className='mr-3'/>
           Due {dueDate}
         </Card.Text>
       </div>
-      <Card.Text>...</Card.Text>
+      <Card.Text>
+      <img src={devs} alt='clock' className='mr-3'/>
+
+      </Card.Text>
     </div>
 
   </Card.Body>

@@ -5,7 +5,7 @@ import TopNav from './components/top-navigation/TopNav';
 import Nav from './components/navigation/Nav';
 import Modules from './components/modules/Modules';
 import TestCases from './components/test-cases/TestCases';
-import QuickOverview from './components/quickOverview/QuickOverview';
+import QuickOverview from './components/quick-overview/QuickOverview';
 
 
 // REDUX CONFIGURATION
@@ -22,7 +22,7 @@ import rootReducer from './reducers/rootReducer';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['modules', 'testCases']
+  whitelist: ['modules', 'testCases', 'testmark']
 };
 
 // Pass the root reducer and persist config into the persist reducer
