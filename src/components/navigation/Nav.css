@@ -1,10 +1,32 @@
 .nav-two-wrapper {
-  margin-left: 100px;
-
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 #nav-two-date {
   color: red;
-  /* color: linear-gradient(0deg, #4DBD98, #4DBD98),  */
-  /* linear-gradient(0deg, #4DBD98, #4DBD98), linear-gradient(0deg, #4DBD98, #4DBD98), #4DBD98 !important; */
+}
+
+.tab-pane {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.ui.secondary.pointing.menu .active.item{
+  color: #f15832 !important;
+  border-color: #f15832 !important;
+}
+
+.ui.secondary.pointing.menu .item:first-of-type {
+  padding-left: 0!important;
+}
+
+.ui.secondary.pointing.menu .item {
+  color: #03293d;
+  opacity: 0.5;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  padding-bottom: 11px!important;
 }

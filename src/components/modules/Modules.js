@@ -6,7 +6,6 @@ import { modules } from '../../actions'
 import { Card } from 'react-bootstrap'
 
 import clock from '../../assets/icons/clock.svg'
-import devs from '../../assets/icons/devs.svg'
 
 import './Modules.css'
 
@@ -67,6 +66,30 @@ const modulesData = [
     subTitle: '',
     dueDate: 'Aug 8',
     images: 'aa' 
+  },
+  {
+    title: 'Apply gradient colours on the dashboard sidenav',
+    subTitle: '',
+    dueDate: 'Aug 8',
+    images: 'aa' 
+  },
+  {
+    title: 'Apply gradient colours on the dashboard sidenav',
+    subTitle: '',
+    dueDate: 'Aug 8',
+    images: 'aa' 
+  },
+  {
+    title: 'Apply gradient colours on the dashboard sidenav',
+    subTitle: '',
+    dueDate: 'Aug 8',
+    images: 'aa' 
+  },
+  {
+    title: 'Apply gradient colours on the dashboard sidenav',
+    subTitle: '',
+    dueDate: 'Aug 8',
+    images: 'aa' 
   }
 ]
 
@@ -75,42 +98,47 @@ useEffect(() => {
 }, [])
 
   return (
-    <div className='modules-wrapper w-100'>
-      <h4> Modules </h4>
-        <ul className='pl-0'>
-{meee.map(({title, subTitle, dueDate, images}, i) => (
-  <li key={i}>
-  <Card className='w-100 mb-3 modules-card'>
-  <Card.Body>
-    <div className='d-flex justify-content-between'>
-      <div>
-        <Card.Text className='mb-0 modules-card-text'>{title}</Card.Text>
-        <Card.Text className='modules-card-text'>{subTitle}</Card.Text>
-      </div>
-      <Card.Text>...</Card.Text>
-    </div>
+   <div className='h-100'>
+   <h4> Modules <span className='module-dots pr-2'>...</span></h4>
 
-    <div className='d-flex justify-content-between'>
-      <div>
-        <Card.Text className='modules-card-due'>
-          <img src={clock} alt='clock' className='mr-3'/>
-          Due {dueDate}
-        </Card.Text>
-      </div>
-      <Card.Text>
-      <img src={devs} alt='clock' className='mr-3'/>
+   <div className='modules-wrapper w-100 '>
+       <ul className='pl-0'>
+      {meee.map(({title, subTitle, dueDate, images}, i) => (
+      <li key={i}>
+      <Card className='w-100 mb-3 modules-card'>
+      <Card.Body>
+        <div className='row'>
+          <div className='col-8'>
+            <Card.Text className='mb-0 modules-card-text'>{title}</Card.Text>
+            <Card.Text className='modules-card-text'>{subTitle}</Card.Text>
+          </div>
+          <div className='col-4'>
+            <Card.Text className='text-right'>...</Card.Text>
+          </div>
+        </div>
 
-      </Card.Text>
-    </div>
+        <div className='d-flex justify-content-between'>
+          <div>
+            <Card.Text className='modules-card-due'>
+              <img src={clock} alt='clock' className='mr-3'/>
+              Due {dueDate}
+            </Card.Text>
+          </div>
+          <Card.Text>
+          <img src='' alt='clock' className='mr-3'/>
 
-  </Card.Body>
-</Card>
-  </li>
+          </Card.Text>
+        </div>
 
-))}
-         
-          </ul>
-    </div>
+      </Card.Body>
+      </Card>
+      </li>
+
+      ))}
+        
+         </ul>
+   </div>
+   </div>
   )
 }
 

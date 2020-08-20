@@ -1,6 +1,4 @@
 .navb {
-  margin-left: 100px;
-  border-bottom: 1px solid black;
   background: #FBFBFB;
   padding-bottom: 20px;
   padding-top: 28px;
@@ -27,34 +25,17 @@ line-height: 21px;
 display: flex;
 align-items: center;
 font-weight: bold;
-/* Dark-blue */
-
 color: #03293D;
 }
+
 .d-menu:focus {
   box-shadow: none !important;
 }
+
 .t-nav-mail {
   font-size: 10px;
   line-height: 14px;
   color: #23B3E8;
-  
 }
 
-@media (max-width: 991px) {
-  #navb-visi {
-    margin-left: 100px;
-  }
-
-  #navb-nonvisi {
-    margin-left: initial;
-  }
-  .navb {
-    padding-bottom: 30px;
-    padding-top: 40px;
- 
-
-  }
-  
-}
 

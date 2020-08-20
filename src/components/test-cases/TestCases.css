@@ -4,10 +4,8 @@
 
 .test-cases-wrapper {
   overflow-y: scroll;
-  /* width: 450px; */
   height: 500px;
   overflow-x: hidden;
-
 }
 
 .test-cases-wrapper ul {
@@ -19,6 +17,10 @@
 .db {
   width: 163px;
   height: 173px;
+}
+
+.list-group-item {
+  border:none !important;
 }
 
 .test-cases-wrapper::-webkit-scrollbar-track {

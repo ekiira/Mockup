@@ -6,13 +6,9 @@ import './QuickOverview.css'
 import doc from '../../assets/icons/docs.svg'
 const QuickOverview = () => {
   return (
-<div>
-  <h4>
-  Quick Overview 
-
-
-  </h4>
-<Card className='quick-overview-wrapper h-100'>
+  <div className='h-100'>
+  <h4> Quick Overview </h4>
+  <Card className='quick-overview-wrapper'>
       <div className='container py-4'>
         <div className='row py-2'>
           <div className='col-12 col-lg-6'>

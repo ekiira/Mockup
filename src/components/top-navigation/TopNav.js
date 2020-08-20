@@ -4,49 +4,45 @@ import React from 'react';
 import { Navbar, Form, InputGroup, FormControl, Nav, Dropdown, ButtonGroup, Button }  from 'react-bootstrap';
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { visibility } from '../../actions'
 
-// Import icons/images
+// Import icons/
 import Logo from '../../assets/icons/brandlogo.svg'
 import Search from '../../assets/icons//search.svg'
 import Notification from '../../assets/icons/bell.svg'
 import Owner from '../../assets/icons/owner.svg'
 import Rank from '../../assets/icons/rank.svg'
-import Photo from '../../assets/images/top-nav-img.svg'
+import Photo from '../../assets/icons/top-nav-img.svg'
 import Menu from '../../assets/icons/menu.svg'
 
 // Custon css file
 import './TopNav.css'
 
-
 const TopNav = () => {
   const dispatch = useDispatch()
-  const visible = useSelector(state => state.navVisibility.navVisible)
 
   const handleSideBar = () => {
     dispatch(visibility())
   }
-
   return (
      <header>
-     <Navbar expand="lg" className='navb' id={visible ? 'navb-visi' : 'navb-nonvisi'}>
-     <Nav.Link className='mr-3 d-flex align-items-center' onClick={handleSideBar}>
-     <img src={Menu} alt='menu-icon' className=''/>
-     </Nav.Link>
-     <Navbar.Brand href="#home" className='mr-5 fcmb'>
-       <img
-         alt=""
-         src={Logo}
-       
-         className="d-inline-block align-top mr-3"
-       />
-     </Navbar.Brand>
-     
-     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-     
-     <Navbar.Collapse id="basic-navbar-nav">
-     <Form inline className='d-none d-lg-block form'>
+     <Navbar  className='navb'>
+      <Nav.Link className='mr-3 d-flex align-items-center' onClick={handleSideBar}>
+      <img src={Menu} alt='menu-icon' className=''/>
+      </Nav.Link>
+      <Navbar.Brand href="/" className='mr-5 fcmb'>
+        <img
+          alt="logo"
+          src={Logo}
+          className="d-inline-block align-top mr-3"
+        />
+      </Navbar.Brand>
+      
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      
+      <Navbar.Collapse id="basic-navbar-nav">
+     <Form inline className='form'>
      <InputGroup>
      <InputGroup.Prepend>
      <InputGroup.Text id="basic-addon1" className='search-text'>
@@ -94,23 +90,6 @@ const TopNav = () => {
      <Dropdown.Item href="#/action-3">Mark Dawn</Dropdown.Item>
      </Dropdown.Menu>
      </Dropdown>
-     <Form inline className='d-block d-lg-none'>
-   <div className='d-flex'>
-   <InputGroup.Prepend>
-   <InputGroup.Text id="basic-addon1" className='search-text'>
-    <img src={Search} alt='Search-Icon' className='img-fluid'/>
-   </InputGroup.Text>
-   </InputGroup.Prepend>
-   <FormControl
-   className='pl-0 search-text'
-   placeholder="Search"
-   aria-label="Search"
-   aria-describedby="basic-addon1"
-   />
-   </div>
-  </Form> 
- 
-     
      </Nav>
      
      </Navbar.Collapse>

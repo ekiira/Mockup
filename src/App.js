@@ -1,12 +1,8 @@
 import React from 'react';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
-import TopNav from './components/top-navigation/TopNav';
-import Nav from './components/navigation/Nav';
-import Modules from './components/modules/Modules';
-import TestCases from './components/test-cases/TestCases';
-import QuickOverview from './components/quick-overview/QuickOverview';
 
+import Body from './components/Body/Body'
 
 // REDUX CONFIGURATION
 import { persistReducer, persistStore } from 'redux-persist';
@@ -40,25 +36,8 @@ const App = () => {
     <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
     <div className="App">
-    <TopNav />
     <SideBar />
-    <Nav />
-    <div className='container mer py-5 pr-0'>
-      <div className='row'> 
-        <div className='col-12 col-lg-3 pr-0'>
-    <Modules />
-
-        </div>
-        <div className='col-12 col-lg-5 pr-0'>
-        <TestCases />
-    
-            </div>
-            <div className='col-12 col-lg-4 pr-0'>
-           <QuickOverview/>
-        
-                </div>
-      </div>
-    </div>
+    <Body/>
   </div>
     </PersistGate>
     </Provider>

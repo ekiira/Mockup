@@ -1,17 +1,26 @@
 .App {
   color: #03293D;
-  background: #2D2D2D;
-opacity: 0.04;
-font-family: 'Nunito Sans', sans-serif;
+  background: #f7f7f7;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
-.mer {
-  padding-left: 100px;
+
+h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: capitalize;
+  color: #03293d;
+  font-family: "Nunito",sans-serif;
+  margin-bottom: 13px;
+
 }
 
-@media (max-width: 991px) {
-  .mer {
-    padding-left: initial;
-  }
-  
+
+@media (max-width: 1186px) {
+.App {
+    width: 1383px;
+    overflow-x: scroll;
+}
 }

@@ -1,0 +1,12 @@
+.body {
+  min-height: 100vh;
+}
+  #navb-visi {
+    margin-left: 100px;
+  }
+
+  #navb-nonvisi {
+    margin-left: initial;
+  }
+
+  

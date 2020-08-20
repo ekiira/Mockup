@@ -1,1 +1,2 @@
 [0819/110937.275:ERROR:process_info.cc(359)] UncheckedAllocate
+[0819/193723.547:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0

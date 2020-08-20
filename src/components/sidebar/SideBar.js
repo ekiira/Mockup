@@ -20,12 +20,12 @@ import './SideBar.css';
 const SideBar = () => {
   const visi = useSelector(state => state.navVisibility.navVisible)
   return (
-    <div className={visi ? 'sidebar-visi' : 'sidebar-nonvisi'} id='sidebar'>
+    <div className={visi ? null : 'sidebar-nonvisi'} id='sidebar'>
       <div className='d-flex justify-content-center align-items-center mm'>
        <div>
         <div>
           <Nav defaultActiveKey="/home" className="flex-column navbar py-1 w-100 h-100">
-            <Nav.Link href="/home" className='logo-wrapper py-4'>
+            <Nav.Link href="/home" className='logo-wrapper py-3'>
               <img src={Logo} className='' alt='logo' />
             </Nav.Link>
             <hr/>
@@ -64,7 +64,7 @@ const SideBar = () => {
            
           </Nav>
 
-          <Nav.Link href="/home" className='py-2 bottom'>
+          <Nav.Link href="/home" className='pt-3 bottom'>
           <img src={ArrowRight} alt='arrow-right' className='img-fluid'/>
 
               </Nav.Link>

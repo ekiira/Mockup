@@ -1,7 +1,7 @@
 import { SET_VISIBILITY } from '../actions'
 
 const initialState = {
- navVisible : false
+ navVisible : true
 };
 
 const navVisibilityReducer= (state = initialState, action) => {
