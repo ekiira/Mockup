@@ -1,12 +1,15 @@
 import React, { useEffect } from 'react';
 
+// redux
 import { useDispatch, useSelector } from 'react-redux'
 import { modules } from '../../actions'
 
 import { Card } from 'react-bootstrap'
 
+// icons/images
 import clock from '../../assets/icons/clock.svg'
 import dots from '../../assets/icons/more-vertical.svg'
+import image from '../../assets/icons/img-1.png'
 
 import './Modules.css'
 
@@ -109,14 +112,13 @@ useEffect(() => {
 
         <div className='d-flex justify-content-between pt-2'>
           <div>
-            <Card.Text className='modules-card-due'>
+            <Card.Text className='modules-card-due mt-1'>
               <img src={clock} alt='clock' className='mr-3'/>
               Due {dueDate}
             </Card.Text>
           </div>
           <Card.Text>
-          <img src='' alt='users' className='mr-3'/>
-
+          <img src={image} alt='users' className=''/>
           </Card.Text>
         </div>
 

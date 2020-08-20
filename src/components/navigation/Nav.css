@@ -30,3 +30,19 @@
   line-height: 19px;
   padding-bottom: 11px!important;
 }
+
+.tab-wrapper {
+  position: relative;
+}
+
+.nav-deadline {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #62c4a4;
+  position: absolute;
+  top: 55px;
+  right: 80px;
+  display: flex;
+  align-items: center;
+}
