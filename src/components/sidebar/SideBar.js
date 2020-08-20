@@ -13,7 +13,6 @@ import Lg from '../../assets/icons/LG.svg'
 import Aw from '../../assets/icons/AW.svg'
 import Aw2 from '../../assets/icons/AW@.svg'
 
-
 import './SideBar.css';
 
 
@@ -45,7 +44,7 @@ const SideBar = () => {
             <hr/>
             <div className='logo-wrapper text-center'>
               <Nav.Link href="/home" className='py-2'>
-                <img src={Aw} className='w-100' alt='logo' />
+                <img src={Pw} className='w-100' alt='logo' />
               </Nav.Link>
               <Nav.Link href="/home" className='py-2'>
                 <img src={Ji} className='w-100' alt='logo' />

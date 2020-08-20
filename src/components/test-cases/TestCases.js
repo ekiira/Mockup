@@ -58,7 +58,7 @@ const TestCases = ( ) => {
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               {mark}
             </Dropdown.Toggle>
-            <Dropdown.Menu>
+            <Dropdown.Menu className='px-2 db-menu'>
               <DropDown/>
             </Dropdown.Menu>
           </Dropdown>

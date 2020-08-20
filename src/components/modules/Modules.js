@@ -6,92 +6,80 @@ import { modules } from '../../actions'
 import { Card } from 'react-bootstrap'
 
 import clock from '../../assets/icons/clock.svg'
+import dots from '../../assets/icons/more-vertical.svg'
 
 import './Modules.css'
 
 const Modules = () => {
   const dispatch = useDispatch()
   const meee = useSelector(state => state.modules.modules)
-const modulesData = [
-  {
-    title: 'Update Logo on all pages ',
-    subTitle: '(HTML,& CSS)',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  },
-  {
-    title: 'Apply gradient colours on the dashboard sidenav',
-    subTitle: '',
-    dueDate: 'Aug 8',
-    images: 'aa' 
-  }
-]
+  const modulesData = [
+    {
+      title: 'Update Logo on all pages ',
+      subTitle: '(HTML,& CSS)',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    },
+    {
+      title: 'Apply gradient colours on the dashboard sidenav',
+      subTitle: '',
+      dueDate: 'Aug 8',
+    }
+  ]
 
 useEffect(() => {
   dispatch(modules(modulesData))
@@ -99,11 +87,13 @@ useEffect(() => {
 
   return (
    <div className='h-100'>
-   <h4> Modules <span className='module-dots pr-2'>...</span></h4>
+   <h4> Modules <span className='module-dots pr-2'>
+   <img src={dots} alt='dots'/> </span>
+    </h4>
 
    <div className='modules-wrapper w-100 '>
        <ul className='pl-0'>
-      {meee.map(({title, subTitle, dueDate, images}, i) => (
+      {meee.map(({title, subTitle, dueDate }, i) => (
       <li key={i}>
       <Card className='w-100 mb-3 modules-card'>
       <Card.Body>
@@ -117,7 +107,7 @@ useEffect(() => {
           </div>
         </div>
 
-        <div className='d-flex justify-content-between'>
+        <div className='d-flex justify-content-between pt-2'>
           <div>
             <Card.Text className='modules-card-due'>
               <img src={clock} alt='clock' className='mr-3'/>
@@ -125,7 +115,7 @@ useEffect(() => {
             </Card.Text>
           </div>
           <Card.Text>
-          <img src='' alt='clock' className='mr-3'/>
+          <img src='' alt='users' className='mr-3'/>
 
           </Card.Text>
         </div>

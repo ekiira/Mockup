@@ -9,7 +9,7 @@ const QuickOverview = () => {
   <div className='h-100'>
   <h4> Quick Overview </h4>
   <Card className='quick-overview-wrapper'>
-      <div className='container py-4'>
+      <div className='container pt-4 pb-5'>
         <div className='row py-2'>
           <div className='col-12 col-lg-6'>
             <Card className='px-4 py-4 lil-card' id='orange'>

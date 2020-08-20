@@ -14,9 +14,9 @@
     padding-inline-start: 0 !important;
 }
 
-.db {
-  width: 163px;
-  height: 173px;
+.db-menu {
+  width: 163px !important;
+  height: 210px !important;
 }
 
 .list-group-item {
@@ -34,7 +34,6 @@
 	width: 3px;
   background-color: #F5F5F5;
   margin-left: 0;
-  
 }
 
 .test-cases-wrapper::-webkit-scrollbar-thumb {
@@ -42,4 +41,29 @@
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
+}
+
+.dropdown-card {
+  border: none;
+  padding: 10px;
+}
+
+.dropdown-form {
+  background: #e8e7ea;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button {
+  background: transparent;
+  border: none;
+    padding: 10px;
+}
+
+
+.button:focus {
+  border: none;
+  outline: none ;
+  box-shadow: none;
 }

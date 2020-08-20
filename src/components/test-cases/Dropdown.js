@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Card, Form } from 'react-bootstrap'
+import { Card, Form } from 'react-bootstrap';
 
-import { useDispatch } from 'react-redux'
-import { tMark } from '../../actions'
+import { useDispatch } from 'react-redux';
+import { tMark } from '../../actions';
 
-import sear from '../../assets/icons/search.svg'
+import './TestCases.css';
 
 const CustomMenu = () => {
   const dispatch = useDispatch();
@@ -15,9 +15,9 @@ const CustomMenu = () => {
     dispatch(tMark(value))
   }
   return (
-    <Card className='db'>
-      <Form.Control type="text" placeholder="Search" />
-      <ul className='list-group list-group-flush'>
+    <Card className='h-100 px-2 dropdown-card'>
+      <Form.Control type="text" placeholder="Search name" className='dropdown-form'/>
+      <ul className='list-group list-group-flush pt-2'>
         <li className='list-group-item p-0'>
           <button className='button w-100 h-100 text-left' value='Pass' onClick={dropdownChange}>
             Pass
